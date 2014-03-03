@@ -48,6 +48,9 @@
 						} else { // this is the current header, 'dock' it to the top of the scroll container
 							// console.log(i + ' is docked to ' + settings.containerOffset);
 							thisSticky.css("top", settings.containerOffset - $(window).scrollTop() ); // fix this header at the top of the container taking into account the window's scroll position
+							if (typeof settings.onHeaderChange == "function") {
+								settings.onHeaderChange.apply(thisSticky);
+							}
 						}
 
 						

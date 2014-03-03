@@ -29,7 +29,7 @@
 	.stickyGradient {
 		width: 380px;
 		height: 40px;
-		background-image: url(scrollbottomgradient.png);
+		background-image: url(example/scrollbottomgradient.png);
 		position: fixed;
 	}
 
