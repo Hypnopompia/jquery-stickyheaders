@@ -30,10 +30,19 @@ Setup your content as such:
 ```
 
 ```javascript
-	$(function(){
-		$('.stickyContainer').stickyHeaders();
+	$('.stickyContainer').stickyHeaders();
+```
+
+You can also register a callback to be fired during scrolling. $(this) will be the div element of the current header that is at the top of the scroll window. See the example for a use case.
+```javascript
+	$('.stickyContainer').stickyHeaders({
+		onHeaderChange: function() { // When we scroll, trigger an event that tells us which header is currently at the top. We'll use this to update the select pulldown.
+			var headerId = $(this).attr('data-header');
+			$('#headerJumpSelect').val(headerId);
+		}
 	});
 ```
+
 ## Authors
 
 [TJ Hunter](https://github.com/hypnopompia)
