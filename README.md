@@ -32,7 +32,7 @@ Setup your content as such:
 ```javascript
 	$(function(){
 		$('.stickyContainer').stickyHeaders();
-	}););
+	});
 ```
 ## Authors
 
