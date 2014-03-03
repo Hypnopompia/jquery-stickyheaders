@@ -1,0 +1,39 @@
+	.stickyContainer {
+		overflow-x: hidden;
+		overflow-y: scroll;
+		width: 400px;
+		height: 600px;
+		position: relative;
+	}
+
+	.stickyHeader {
+		background: #000;
+		opacity: .75;
+		color: #FFF;
+		font-size: 22px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		width:380px;
+		height: 40px;
+	}
+
+	.stickyHeader.fixed {
+		position: fixed;
+		top: 0;
+	}
+
+	.stickyHeader.fixed.absolute {
+		position: absolute;
+	}
+
+	.stickyGradient {
+		width: 380px;
+		height: 40px;
+		background-image: url(scrollbottomgradient.png);
+		position: fixed;
+	}
+
+	.gradientSpacer {
+		height: 40px;
+		width: 380px;
+	}
