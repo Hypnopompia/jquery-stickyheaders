@@ -3,6 +3,9 @@ jquery-stickyheaders
 
 Jquery plugin to stick headers while scrolling similar to instagram.
 
+## Demo
+Please visit [the demo page](http://hypnopompia.github.io/jquery-stickyheaders/)
+
 ## Installation
 
 Include script *after* the jQuery library (unless you are packaging scripts somehow else):
