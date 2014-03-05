@@ -18,7 +18,7 @@
 			var stickyContainer = $(this);
 			settings.containerOffset = $(this).offset().top;
 
-			$(settings.gradientSelector).css('top', ( settings.containerOffset + $(this).height() - $(settings.gradientSelector).height() ) + 'px');
+			// $(settings.gradientSelector).css('top', ( settings.containerOffset + $(this).height() - $(settings.gradientSelector).height() ) + 'px');
 
 			$(this).children(settings.headerSelector).each(function(i){ // loop through all of the sticky header elements
 				var sticky = $(this).wrap('<div class="stickyWrap" />'); // wrap each sticky header with a div that will stay in place as a height placeholder when we 'dock' the real header to the top of the scroll window.
