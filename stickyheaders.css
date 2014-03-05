@@ -4,6 +4,7 @@
 		width: 400px;
 		height: 600px;
 		position: relative;
+		background: #f2f2f2;
 	}
 
 	.stickyHeader {
@@ -27,6 +28,7 @@
 	}
 
 	.stickyGradient {
+		top: 605px;
 		width: 380px;
 		height: 40px;
 		background-image: url(scrollbottomgradient.png);
