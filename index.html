@@ -1,49 +1,51 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Jquery-stickyheaders : Jquery plugin to stick headers while scrolling similar to instagram." />
+	<head>
+		<meta charset='utf-8' />
+		<meta http-equiv="X-UA-Compatible" content="chrome=1" />
+		<meta name="description" content="Jquery-stickyheaders : Jquery plugin to stick headers while scrolling similar to instagram." />
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <title>Jquery-stickyheaders</title>
-    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="jquery.stickyheaders.js"></script>
+		<title>Jquery-stickyheaders</title>
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script src="jquery.stickyheaders.js"></script>
 		<link rel="stylesheet" href="stickyheaders.css">
-  </head>
+	</head>
 
-  <body>
+	<body>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/Hypnopompia/jquery-stickyheaders">View on GitHub</a>
+		<!-- HEADER -->
+		<div id="header_wrap" class="outer">
+				<header class="inner">
+					<a id="forkme_banner" href="https://github.com/Hypnopompia/jquery-stickyheaders">View on GitHub</a>
 
-          <h1 id="project_title">Jquery-stickyheaders</h1>
-          <h2 id="project_tagline">Jquery plugin to stick headers while scrolling similar to instagram.</h2>
+					<h1 id="project_title">Jquery-stickyheaders</h1>
+					<h2 id="project_tagline">Jquery plugin to stick headers while scrolling similar to instagram.</h2>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/Hypnopompia/jquery-stickyheaders/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/Hypnopompia/jquery-stickyheaders/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
+						<section id="downloads">
+							<a class="zip_download_link" href="https://github.com/Hypnopompia/jquery-stickyheaders/zipball/master">Download this project as a .zip file</a>
+							<a class="tar_download_link" href="https://github.com/Hypnopompia/jquery-stickyheaders/tarball/master">Download this project as a tar.gz file</a>
+						</section>
+				</header>
+		</div>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>
+		<!-- MAIN CONTENT -->
+		<div id="main_content_wrap" class="outer">
+			<section id="main_content" class="inner">
+				<h1>
 <a name="jquery-stickyheaders" class="anchor" href="#jquery-stickyheaders"><span class="octicon octicon-link"></span></a>jquery-stickyheaders</h1>
 
 <p>Jquery plugin to stick headers while scrolling similar to instagram.</p>
 
 <h2>
 <a name="demo" class="anchor" href="#demo"><span class="octicon octicon-link"></span></a>Demo</h2>
-<div class="stickyContainer">
 
-			<div class="stickyHeader" data-header="1">Header 1</div>
+<div class="gradientContainer">
+
+	<div class="stickyContainer">
+		<div class="stickyHeader" data-header="1">Header 1</div>
 
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque orci neque, accumsan in dui in, gravida sodales diam. Quisque ligula dolor, ultrices ut tellus eu, imperdiet viverra metus. Quisque pulvinar mollis felis egestas molestie. Phasellus facilisis odio quis laoreet congue. Fusce in neque tincidunt, tincidunt turpis eu, sodales felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse iaculis massa eget aliquam posuere. Curabitur vel lobortis nunc. Suspendisse placerat felis at lorem tempor interdum.</p>
 
@@ -93,14 +95,16 @@
 
 
 			<div class="gradientSpacer"></div>
-			<div class="stickyGradient"></div>
 		</div>
+		<div class="stickyGradient"></div>
 
-		<script>
-			$(function(){
-				$('.stickyContainer').stickyHeaders();
-			});
-		</script>
+	</div>
+	
+	<script>
+		$(function(){
+			$('.stickyContainer').stickyHeaders();
+		});
+	</script>
 		
 <h2>
 <a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
@@ -120,12 +124,12 @@ in Internet Explorer on Windows 7 for instance (because of the wrong MIME type).
 <p>Setup your content as such:</p>
 
 <div class="highlight highlight-html"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"stickyContainer"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"stickyHeader"</span><span class="nt">&gt;</span>Header 1<span class="nt">&lt;/div&gt;</span>
-    ... content ...
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"stickyHeader"</span><span class="nt">&gt;</span>Header 2<span class="nt">&lt;/div&gt;</span>
-    ... content ...
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"stickyHeader"</span><span class="nt">&gt;</span>Header 3<span class="nt">&lt;/div&gt;</span>
-    ... content ...
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"stickyHeader"</span><span class="nt">&gt;</span>Header 1<span class="nt">&lt;/div&gt;</span>
+		... content ...
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"stickyHeader"</span><span class="nt">&gt;</span>Header 2<span class="nt">&lt;/div&gt;</span>
+		... content ...
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"stickyHeader"</span><span class="nt">&gt;</span>Header 3<span class="nt">&lt;/div&gt;</span>
+		... content ...
 <span class="nt">&lt;/div&gt;</span>
 </pre></div>
 
@@ -135,29 +139,29 @@ in Internet Explorer on Windows 7 for instance (because of the wrong MIME type).
 <p>You can also register a callback to be fired during scrolling. $(this) will be the div element of the current header that is at the top of the scroll window. See the example for a use case.</p>
 
 <div class="highlight highlight-javascript"><pre>    <span class="nx">$</span><span class="p">(</span><span class="s1">'.stickyContainer'</span><span class="p">).</span><span class="nx">stickyHeaders</span><span class="p">({</span>
-        <span class="nx">onHeaderChange</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="c1">// When we scroll, trigger an event that tells us which header is currently at the top. We'll use this to update the select pulldown.</span>
-            <span class="kd">var</span> <span class="nx">headerId</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s1">'data-header'</span><span class="p">);</span>
-            <span class="nx">$</span><span class="p">(</span><span class="s1">'#headerJumpSelect'</span><span class="p">).</span><span class="nx">val</span><span class="p">(</span><span class="nx">headerId</span><span class="p">);</span>
-        <span class="p">}</span>
-    <span class="p">});</span>
+				<span class="nx">onHeaderChange</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="c1">// When we scroll, trigger an event that tells us which header is currently at the top. We'll use this to update the select pulldown.</span>
+						<span class="kd">var</span> <span class="nx">headerId</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s1">'data-header'</span><span class="p">);</span>
+						<span class="nx">$</span><span class="p">(</span><span class="s1">'#headerJumpSelect'</span><span class="p">).</span><span class="nx">val</span><span class="p">(</span><span class="nx">headerId</span><span class="p">);</span>
+				<span class="p">}</span>
+		<span class="p">});</span>
 </pre></div>
 
 <h2>
 <a name="authors" class="anchor" href="#authors"><span class="octicon octicon-link"></span></a>Authors</h2>
 
 <p><a href="https://github.com/hypnopompia">TJ Hunter</a></p>
-      </section>
-    </div>
+			</section>
+		</div>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Jquery-stickyheaders maintained by <a href="https://github.com/Hypnopompia">Hypnopompia</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
+		<!-- FOOTER  -->
+		<div id="footer_wrap" class="outer">
+			<footer class="inner">
+				<p class="copyright">Jquery-stickyheaders maintained by <a href="https://github.com/Hypnopompia">Hypnopompia</a></p>
+				<p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+			</footer>
+		</div>
 
-    
+		
 
-  </body>
+	</body>
 </html>

@@ -1,9 +1,15 @@
+	.gradientContainer {
+		position: relative;
+		width: 400px;
+		height: 600px;
+	}
+
 	.stickyContainer {
 		overflow-x: hidden;
 		overflow-y: scroll;
 		width: 400px;
 		height: 600px;
-		position: relative;
+		position: absolute;
 		background: #f2f2f2;
 	}
 
@@ -28,11 +34,11 @@
 	}
 
 	.stickyGradient {
-		top: 605px;
+		position: absolute;
+		bottom: 0px;
 		width: 380px;
 		height: 40px;
 		background-image: url(scrollbottomgradient.png);
-		position: fixed;
 	}
 
 	.gradientSpacer {
