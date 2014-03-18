@@ -39,9 +39,6 @@
 .jquery-stickyheaders .stickyContainer .stickyHeader.fixed.absolute {
   position: absolute;
 }
-.jquery-stickyheaders .stickyContainer .themeCategoryDescription {
-  margin: 10px;
-}
 .jquery-stickyheaders .stickyContainer .gradientSpacer {
   height: 40px;
 }
