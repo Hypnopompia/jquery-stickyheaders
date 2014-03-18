@@ -1,0 +1,71 @@
+@scrollBoxHeight: 500px;
+@scrollBoxWidth: 320px;
+
+.jquery-stickyheaders {
+	position: relative;
+	height: @scrollBoxHeight;
+	width: @scrollBoxWidth;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+	.stickyContainer {
+		margin-top: 10px;
+		border: 1px solid #999;
+		overflow-x: hidden;
+		overflow-y: scroll;
+		height: @scrollBoxHeight;
+		position: relative;
+
+		p {
+			margin: 10px;
+		}
+
+		.stickyHeader {
+			background: #999;
+			opacity: .75;
+			color: #FFF;
+			height: 40px;
+			width: 303px;
+			padding-top: 5px;
+			padding-bottom: 5px;
+		}
+
+		.stickyHeader p {
+			margin-top: 10px;
+			margin-left: 10px;
+			font-size: 25px;
+			font-weight: bold;
+			color: #000;
+			text-shadow:
+			-1px -1px 0 #FFF,
+			1px -1px 0 #FFF,
+			-1px 1px 0 #FFF,
+			1px 1px 0 #FFF;
+		}
+
+		.stickyHeader.fixed {
+			position: fixed;
+			top: 1;
+		}
+
+		.stickyHeader.fixed.absolute {
+			position: absolute;
+		}
+
+		.themeCategoryDescription {
+			margin: 10px;
+		}
+
+		.gradientSpacer {
+			height: 40px;
+		}
+	}
+
+	.stickyGradientBottom {
+		height: 40px;
+		width: 303px;
+		background-image: url(scrollbottomgradient.png);
+		position: absolute;
+		left: 1px;
+		bottom: -1px;
+	}
+}
