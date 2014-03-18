@@ -1,47 +1,52 @@
-	.gradientContainer {
-		position: relative;
-		width: 400px;
-		height: 600px;
-	}
-
-	.stickyContainer {
-		overflow-x: hidden;
-		overflow-y: scroll;
-		width: 400px;
-		height: 600px;
-		position: absolute;
-		background: #f2f2f2;
-	}
-
-	.stickyHeader {
-		background: #000;
-		opacity: .75;
-		color: #FFF;
-		font-size: 22px;
-		padding-top: 5px;
-		padding-bottom: 5px;
-		width:380px;
-		height: 40px;
-	}
-
-	.stickyHeader.fixed {
-		position: fixed;
-		top: 0;
-	}
-
-	.stickyHeader.fixed.absolute {
-		position: absolute;
-	}
-
-	.stickyGradient {
-		position: absolute;
-		bottom: 0px;
-		width: 380px;
-		height: 40px;
-		background-image: url(scrollbottomgradient.png);
-	}
-
-	.gradientSpacer {
-		height: 40px;
-		width: 380px;
-	}
+.jquery-stickyheaders {
+  position: relative;
+  height: 500px;
+  width: 320px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.jquery-stickyheaders .stickyContainer {
+  margin-top: 10px;
+  border: 1px solid #999;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 500px;
+  position: relative;
+}
+.jquery-stickyheaders .stickyContainer p {
+  margin: 10px;
+}
+.jquery-stickyheaders .stickyContainer .stickyHeader {
+  background: #999;
+  opacity: .75;
+  color: #FFF;
+  height: 40px;
+  width: 303px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.jquery-stickyheaders .stickyContainer .stickyHeader p {
+  margin-top: 5px;
+  margin-left: 10px;
+  font-size: 25px;
+  font-weight: bold;
+  color: #000;
+  text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
+}
+.jquery-stickyheaders .stickyContainer .stickyHeader.fixed {
+  position: fixed;
+  top: 1;
+}
+.jquery-stickyheaders .stickyContainer .stickyHeader.fixed.absolute {
+  position: absolute;
+}
+.jquery-stickyheaders .stickyContainer .gradientSpacer {
+  height: 40px;
+}
+.jquery-stickyheaders .stickyGradientBottom {
+  height: 40px;
+  width: 303px;
+  background-image: url(scrollbottomgradient.png);
+  position: absolute;
+  left: 1px;
+  bottom: -1px;
+}

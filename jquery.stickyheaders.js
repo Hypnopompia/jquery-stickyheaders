@@ -12,23 +12,39 @@
 	(function ( $ ) {
 
 		$.fn.stickyHeaders = function( options ) {
-
-			var settings = $.extend({}, $.fn.stickyHeaders.defaults, options );
-
 			var stickyContainer = $(this);
-			settings.containerOffset = $(this).offset().top;
 
-			// $(settings.gradientSelector).css('top', ( settings.containerOffset + $(this).height() - $(settings.gradientSelector).height() ) + 'px');
+			var settings = $.data(this, 'settings'); // Try to use settings that were already configured
+
+			if (!settings) { // No previously configured settings, use the defaults and/or the ones from the options passed in
+				settings = $.extend( {}, $.fn.stickyHeaders.defaults, options );
+				settings.containerOffset = $(this).offset().top;
+
+				$.data(this, 'settings', settings); // Save the settings into this element
+			}
+
+			if (options == 'updateOriginalPos') {
+				updateOriginalPos();
+				return;
+			}
 
 			$(this).children(settings.headerSelector).each(function(i){ // loop through all of the sticky header elements
 				var sticky = $(this).wrap('<div class="stickyWrap" />'); // wrap each sticky header with a div that will stay in place as a height placeholder when we 'dock' the real header to the top of the scroll window.
 				sticky.parent().height(sticky.outerHeight()); // Set the wrap to the same height as the real sticky header so that lower DOM elements won't shift up
-				sticky.attr('data-originalPOS', sticky.position().top); // save the original position of the sticky when we started. we need this to restore it later.
 			});
 
+			function updateOriginalPos() {
+				stickyContainer.find(settings.headerSelector).each(function(i){ // loop through all of the sticky header elements
+					var sticky = $(this);
+					sticky.attr('data-originalPOS', sticky.parent().position().top + stickyContainer.scrollTop()); // save the original position of the sticky when we started. we need this to restore it later.
+				});
+			}
+
+			updateOriginalPos();
 
 			function scroll() {
-				
+				updateOriginalPos(); // Stuff might still be loading, so keep positions updated while we scroll
+
 				var stickyHeaders = stickyContainer.find(settings.headerSelector);
 				stickyHeaders.each(function(i){
 					var thisSticky = $(this);
@@ -76,8 +92,7 @@
 		};
 
 		$.fn.stickyHeaders.defaults = {
-			headerSelector: ".stickyHeader",
-			gradientSelector: ".stickyGradient"
+			headerSelector: ".stickyHeader"
 		};
 
 	}( jQuery ));
